@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import { Lato } from 'next/font/google';
+import './globals.css';
+import Providers from './providers';
 import Navbar from '@/components/navbar/Navbar';
 import Container from '@/components/global/Container';
 
 type Props = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export const metadata: Metadata = {
@@ -21,10 +22,12 @@ const lato = Lato({
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={lato.className}>
-        <Navbar />
-        <Container className='pt-16'>{children}</Container>
+        <Providers>
+          <Navbar />
+          <Container className='pt-16'>{children}</Container>
+        </Providers>
       </body>
     </html>
   );
