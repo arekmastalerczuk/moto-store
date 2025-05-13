@@ -1,10 +1,13 @@
 import React from 'react';
+import Hero from '@/components/home/Hero';
+import FeaturedProducts from '@/components/home/FeaturedProducts';
 
 function HomePage() {
   return (
-    <div>
-      <h1 className='text-3xl font-bold'>Armast Store</h1>
-    </div>
+    <>
+      <Hero />
+      <FeaturedProducts />
+    </>
   );
 }
 
