@@ -1,0 +1,38 @@
+[
+  {
+    "name": "avant-garde lamp",
+    "company": "Modenza",
+    "description": "A modern masterpiece that combines cutting-edge design with functionality. This avant-garde lamp features sleek lines and innovative lighting technology, perfect for creating a contemporary atmosphere in any room.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/943150/pexels-photo-943150.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 100,
+    "clerkId": "clerkId"
+  },
+  {
+    "name": "chic chair",
+    "company": "Luxora",
+    "description": "Elevate your living space with this chic chair that blends comfort with style. The ergonomic design ensures optimal seating while the modern aesthetic makes it a statement piece in any room.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/5705090/pexels-photo-5705090.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 200,
+    "clerkId": "clerkId"
+  },
+  {
+    "name": "comfy bed",
+    "company": "Homestead",
+    "description": "Experience the ultimate in comfort with this plush bed. Designed for maximum relaxation, it features premium materials and a supportive construction that ensures a perfect night's sleep every time.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 300,
+    "clerkId": "clerkId"
+  },
+  {
+    "name": "contemporary sofa",
+    "company": "Comfora",
+    "description": "A modern sofa that redefines living room elegance. With its clean lines and minimalist design, this contemporary sofa offers both style and comfort, making it the perfect centerpiece for your home.",
+    "featured": false,
+    "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 400,
+    "clerkId": "clerkId"
+  }
+]
