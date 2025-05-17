@@ -7,7 +7,7 @@ type Props = {
 };
 
 function EmptyList({ heading = 'No items found.', className }: Props) {
-  return <h2 className={cn('text-xl', className)}>{heading}</h2>;
+  return <h2 className={cn('mt-8 text-xl', className)}>{heading}</h2>;
 }
 
 export default EmptyList;

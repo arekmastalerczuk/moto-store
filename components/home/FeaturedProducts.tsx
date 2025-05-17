@@ -1,7 +1,6 @@
 import React from 'react';
 import { fetchFeaturedProducts } from '@/utils/actions';
 import EmptyList from '../global/EmptyList';
-import SectionTitle from '../global/SectionTitle';
 import ProductsGrid from '../products/ProductsGrid';
 
 async function FeaturedProducts() {
@@ -12,8 +11,7 @@ async function FeaturedProducts() {
   }
 
   return (
-    <section className='pt-12'>
-      <SectionTitle title='featured products' />
+    <section>
       <ProductsGrid products={products} />
     </section>
   );

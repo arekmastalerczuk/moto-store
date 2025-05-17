@@ -17,8 +17,8 @@ function LoadingProduct() {
     <Card>
       <CardContent className='p-4'>
         <Skeleton className='h-48 w-full md:h-48' />
-        <Skeleton className='mx-auto mt-4 h-4 w-3/4' />
-        <Skeleton className='mx-auto mt-4 h-4 w-1/4' />
+        <Skeleton className='mx-auto mt-4 h-5 w-3/4' />
+        <Skeleton className='mx-auto mt-4 h-5 w-1/4' />
       </CardContent>
     </Card>
   );
