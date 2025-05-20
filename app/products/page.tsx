@@ -1,7 +1,18 @@
 import React from 'react';
+import ProductsContainer from '@/components/products/ProductsContainer';
 
-function ProductsPage() {
-  return <h1 className='text-3xl font-bold'>Products Page</h1>;
+type Props = {
+  searchParams: {
+    layout?: string;
+    search?: string;
+  };
+};
+
+function ProductsPage({ searchParams }: Props) {
+  const layout = searchParams.layout || 'grid';
+  const search = searchParams.search || '';
+
+  return <ProductsContainer layout={layout} search={search} />;
 }
 
 export default ProductsPage;
