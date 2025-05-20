@@ -11,7 +11,7 @@ type Props = {
 };
 
 function SingleGridProduct({ product }: Props) {
-  const { id, name, image, price } = product;
+  const { id, name, company, image, price } = product;
   const dollarsAmount = formatPrice(price);
 
   return (
@@ -31,6 +31,7 @@ function SingleGridProduct({ product }: Props) {
             </div>
             <div className='mt-4 text-center'>
               <h2 className='text-lg capitalize'>{name}</h2>
+              <h3 className='text-muted-foreground'>{company}</h3>
               <p className='mt-2 text-muted-foreground'>{dollarsAmount}</p>
             </div>
           </CardContent>
