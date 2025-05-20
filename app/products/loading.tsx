@@ -1,13 +1,14 @@
 'use client';
 
 import React from 'react';
+import { useSearchParams } from 'next/navigation';
+import { IoGridOutline, IoListOutline } from 'react-icons/io5';
+import { Button } from '@/components/ui/button';
 import LoadingContainer from '@/components/global/LoadingContainer';
 import SectionTitle from '@/components/global/SectionTitle';
 import { Skeleton } from '@/components/ui/skeleton';
-import { IoGridOutline, IoListOutline } from 'react-icons/io5';
-import { Button } from '@/components/ui/button';
 
-function loading() {
+function Loading() {
   return (
     <>
       <LoadingHeader />
@@ -16,9 +17,12 @@ function loading() {
   );
 }
 
-export default loading;
+export default Loading;
 
 function LoadingHeader() {
+  const params = useSearchParams();
+  const layout = params.get('layout') || 'grid';
+
   return (
     <>
       <section>
@@ -26,10 +30,16 @@ function LoadingHeader() {
         <div className='mt-8 flex items-center justify-between'>
           <Skeleton className='h-6 w-36' />
           <div className='flex gap-x-4'>
-            <Button size='icon' variant='default'>
+            <Button
+              size='icon'
+              variant={layout === 'grid' ? 'default' : 'ghost'}
+            >
               <IoGridOutline />
             </Button>
-            <Button size='icon' variant='ghost'>
+            <Button
+              size='icon'
+              variant={layout === 'list' ? 'default' : 'ghost'}
+            >
               <IoListOutline />
             </Button>
           </div>
