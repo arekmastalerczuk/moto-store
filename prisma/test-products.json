@@ -1,38 +1,38 @@
 [
   {
-    "name": "avant-garde lamp",
-    "company": "Modenza",
-    "description": "A modern masterpiece that combines cutting-edge design with functionality. This avant-garde lamp features sleek lines and innovative lighting technology, perfect for creating a contemporary atmosphere in any room.",
+    "name": "350T",
+    "company": "Zontes",
+    "description": "The Zontes 350T is a versatile adventure motorcycle that combines off-road capability with on-road comfort. With its powerful 350cc liquid-cooled engine, this bike delivers smooth power delivery across all RPM ranges, making it perfect for both city commuting and weekend adventures. The lightweight chassis and long-travel suspension provide excellent handling on rough terrains, while the comfortable upright riding position ensures fatigue-free long-distance touring. The 350T comes equipped with modern features like full LED lighting, a TFT display, and dual-channel ABS, making it a compelling choice for both new and experienced riders looking for a capable all-rounder.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/943150/pexels-photo-943150.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 100,
+    "image": "https://images.pexels.com/photos/12993762/pexels-photo-12993762.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 6500,
     "clerkId": "clerkId"
   },
   {
-    "name": "chic chair",
-    "company": "Luxora",
-    "description": "Elevate your living space with this chic chair that blends comfort with style. The ergonomic design ensures optimal seating while the modern aesthetic makes it a statement piece in any room.",
+    "name": "CMX1100",
+    "company": "Honda",
+    "description": "The Honda CMX1100 redefines the modern cruiser experience with its powerful 1100cc parallel-twin engine, delivering impressive torque at low RPMs for that authentic cruiser feel. The bike's low-slung design, combined with a comfortable 700mm seat height, makes it accessible to riders of all sizes while maintaining that classic bobber aesthetic. Advanced features include multiple riding modes, traction control, and cruise control, ensuring both safety and comfort on long rides. The CMX1100 boasts premium fit and finish, with attention to detail evident in its high-quality paintwork, LED lighting, and a sleek, minimalist design that turns heads wherever it goes. Whether you're cruising the boulevard or hitting the open highway, this bike offers a perfect blend of style, comfort, and performance.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/5705090/pexels-photo-5705090.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 200,
+    "image": "https://images.pexels.com/photos/30254289/pexels-photo-30254289/free-photo-of-elegancki-czarny-motocykl-w-ciemnym-garazu.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 14000,
     "clerkId": "clerkId"
   },
   {
-    "name": "comfy bed",
-    "company": "Homestead",
-    "description": "Experience the ultimate in comfort with this plush bed. Designed for maximum relaxation, it features premium materials and a supportive construction that ensures a perfect night's sleep every time.",
+    "name": "Ninja ZX-10R",
+    "company": "Kawasaki",
+    "description": "The Kawasaki Ninja ZX-10R is a track-focused superbike that brings race-winning technology to the street. Powered by a screaming 998cc inline-four engine producing over 200 horsepower, this machine is built for adrenaline-pumping performance. The advanced electronics package includes multiple riding modes, cornering ABS, traction control, and wheelie control, allowing riders to extract maximum performance with confidence. The aerodynamic bodywork, developed in wind tunnels, provides excellent wind protection while contributing to the bike's aggressive styling. With its race-bred chassis, high-spec suspension components, and premium brakes, the ZX-10R delivers razor-sharp handling and braking performance that will satisfy even the most demanding sportbike enthusiasts.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 300,
+    "image": "https://images.pexels.com/photos/10647707/pexels-photo-10647707.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 26000,
     "clerkId": "clerkId"
   },
   {
-    "name": "contemporary sofa",
-    "company": "Comfora",
-    "description": "A modern sofa that redefines living room elegance. With its clean lines and minimalist design, this contemporary sofa offers both style and comfort, making it the perfect centerpiece for your home.",
+    "name": "R15M",
+    "company": "Yamaha",
+    "description": "The Yamaha R15M is a premium supersport motorcycle that brings MotoGP-inspired technology to the entry-level segment. Its 155cc liquid-cooled engine with Variable Valve Actuation (VVA) technology delivers strong performance across the entire rev range, making it equally capable in city traffic and on winding mountain roads. The Deltabox frame and aluminum swingarm provide exceptional handling characteristics, while the fully digital instrument cluster with shift light and gear position indicator keeps the rider informed. The R15M's aggressive fairing design not only looks stunning but also improves aerodynamics, and the dual LED headlights give it a distinctive, high-end appearance. With its combination of race-bred technology, premium components, and accessible performance, the R15M is the perfect choice for riders looking to experience the thrill of sportbike riding.",
     "featured": false,
-    "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 400,
+    "image": "https://images.pexels.com/photos/19435687/pexels-photo-19435687/free-photo-of-droga-srebro-srebrny-motocykl.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 13000,
     "clerkId": "clerkId"
   }
 ]
