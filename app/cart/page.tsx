@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function CartPage() {
-  return <h1 className='text-3xl font-bold'>Cart Page</h1>;
+  return <h1 className="text-3xl font-bold">Cart Page</h1>;
 }
 
 export default CartPage;

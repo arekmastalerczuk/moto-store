@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 // import { Product } from '@prisma/client';
-import { Product } from '@/lib/generated/prisma';
-import SingleListProduct from './SingleListProduct';
+import { Product } from "@/lib/generated/prisma";
+import SingleListProduct from "./SingleListProduct";
 
 type Props = {
   products: Product[];
@@ -9,7 +9,7 @@ type Props = {
 
 function ProductsList({ products }: Props) {
   return (
-    <div className='flex flex-col gap-y-4 pt-12'>
+    <div className="flex flex-col gap-y-4 pt-12">
       {products.map((product) => {
         return <SingleListProduct key={product.id} product={product} />;
       })}

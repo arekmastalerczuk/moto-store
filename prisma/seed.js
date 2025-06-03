@@ -1,5 +1,5 @@
-const { PrismaClient } = require('@prisma/client');
-const products = require('./test-products.json');
+const { PrismaClient } = require("@prisma/client");
+const products = require("./test-products.json");
 const prisma = new PrismaClient();
 
 async function main() {

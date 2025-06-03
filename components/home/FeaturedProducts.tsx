@@ -1,7 +1,7 @@
-import React from 'react';
-import { fetchFeaturedProducts } from '@/utils/actions';
-import EmptyList from '../global/EmptyList';
-import ProductsGrid from '../products/ProductsGrid';
+import React from "react";
+import { fetchFeaturedProducts } from "@/utils/actions";
+import EmptyList from "../global/EmptyList";
+import ProductsGrid from "../products/ProductsGrid";
 
 async function FeaturedProducts() {
   const products = await fetchFeaturedProducts();

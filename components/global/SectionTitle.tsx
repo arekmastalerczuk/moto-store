@@ -1,6 +1,6 @@
-import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 type Props = {
   title: string;
@@ -12,7 +12,7 @@ function SectionTitle({ title, className }: Props) {
     <>
       <h2
         className={cn(
-          'mb-8 text-3xl font-medium capitalize tracking-wider',
+          "mb-8 text-3xl font-medium capitalize tracking-wider",
           className,
         )}
       >

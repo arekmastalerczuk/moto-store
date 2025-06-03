@@ -1,5 +1,5 @@
-import React from 'react';
-import ProductsContainer from '@/components/products/ProductsContainer';
+import React from "react";
+import ProductsContainer from "@/components/products/ProductsContainer";
 
 type Props = {
   searchParams: {
@@ -9,8 +9,8 @@ type Props = {
 };
 
 function ProductsPage({ searchParams }: Props) {
-  const layout = searchParams.layout || 'grid';
-  const search = searchParams.search || '';
+  const layout = searchParams.layout || "grid";
+  const search = searchParams.search || "";
 
   return <ProductsContainer layout={layout} search={search} />;
 }

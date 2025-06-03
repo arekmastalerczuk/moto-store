@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '../ui/button';
+import React from "react";
+import { Button } from "../ui/button";
 
 type Props = {
   productId: string;
@@ -7,7 +7,7 @@ type Props = {
 
 function AddToCart({ productId }: Props) {
   return (
-    <Button size='lg' className='mt-8 capitalize'>
+    <Button size="lg" className="mt-8 capitalize">
       add to cart
     </Button>
   );

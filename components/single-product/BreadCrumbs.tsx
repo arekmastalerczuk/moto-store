@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -6,7 +6,7 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbPage,
-} from '../ui/breadcrumb';
+} from "../ui/breadcrumb";
 
 type Props = {
   name: string;
@@ -17,15 +17,15 @@ function BreadCrumbs({ name }: Props) {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href='/products'>Products</BreadcrumbLink>
+          <BreadcrumbLink href="/products">Products</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className='font-bold capitalize tracking-wider'>
+          <BreadcrumbPage className="font-bold capitalize tracking-wider">
             {name}
           </BreadcrumbPage>
         </BreadcrumbItem>
