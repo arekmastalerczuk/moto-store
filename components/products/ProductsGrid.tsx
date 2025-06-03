@@ -1,6 +1,6 @@
 import React from "react";
-// import { Product } from '@prisma/client';
-import { Product } from "@/lib/generated/prisma";
+import { Product } from "@prisma/client";
+// import { Product } from "@/lib/generated/prisma";
 import SingleGridProduct from "./SingleGridProduct";
 
 type Props = {
