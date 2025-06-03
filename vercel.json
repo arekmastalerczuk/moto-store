@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "VERCEL_GIT_CLONE_DEPTH": "0"
+    }
+  }
+}
