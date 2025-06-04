@@ -2,6 +2,7 @@
 
 import React from "react";
 import ThemeProvider from "./theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 type Props = {
   children: React.ReactNode;
@@ -9,6 +10,7 @@ type Props = {
 function Providers({ children }: Props) {
   return (
     <>
+      <Toaster />
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         {children}
       </ThemeProvider>
