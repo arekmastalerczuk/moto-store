@@ -1,5 +1,3 @@
-"use client";
-
 import React, { Suspense } from "react";
 import ProductsLoadingHeader from "./ProductsLoadingHeader";
 import LoadingContainer from "@/components/global/LoadingContainer";

@@ -1,13 +1,13 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ImGift } from "react-icons/im";
+import { PiMotorcycleFill } from "react-icons/pi";
 
 function Logo() {
   return (
     <Button size="icon" asChild>
       <Link href="/">
-        <ImGift />
+        <PiMotorcycleFill />
       </Link>
     </Button>
   );

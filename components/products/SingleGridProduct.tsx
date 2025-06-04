@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "../ui/card";
 import { Product } from "@prisma/client";
-// import { Product } from "@/lib/generated/prisma";
 import { formatPrice } from "@/utils/format";
 import FavoriteToggleButton from "./FavoriteToggleButton";
 
