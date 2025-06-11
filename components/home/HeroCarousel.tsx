@@ -14,12 +14,14 @@ import hero2 from "@/public/images/hero2.jpg";
 import hero3 from "@/public/images/hero3.jpg";
 import hero4 from "@/public/images/hero4.jpg";
 import hero5 from "@/public/images/hero5.jpg";
+import hero6 from "@/public/images/hero6.jpg";
+import hero7 from "@/public/images/hero7.jpg";
 
 type Props = {
   className?: string;
 };
 
-const carouselImages = [hero1, hero2, hero3, hero4, hero5];
+const carouselImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 
 function HeroCarousel({ className }: Props) {
   return (
