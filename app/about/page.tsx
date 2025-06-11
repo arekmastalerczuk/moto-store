@@ -1,4 +1,5 @@
 import React from "react";
+import { GiFullMotorcycleHelmet } from "react-icons/gi";
 
 function AboutPage() {
   return (
@@ -10,6 +11,7 @@ function AboutPage() {
           <span className="rounded-xl bg-primary px-4 py-2 font-bold tracking-wider text-primary-foreground">
             Store
           </span>
+          <GiFullMotorcycleHelmet className="relative -left-2 -top-8 size-10 sm:-left-4 sm:-top-10 sm:size-12" />
         </h2>
         <p className="mx-auto mt-12 max-w-2xl text-xl font-light leading-8 tracking-wide sm:text-2xl">
           We put our customers at the heart of everything we do.
