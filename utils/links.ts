@@ -3,7 +3,7 @@ type NavLink = {
   label: string;
 };
 
-export const navLinks: NavLink[] = [
+export const loggedOutLinks: NavLink[] = [
   {
     href: "/",
     label: "Home",
@@ -16,6 +16,10 @@ export const navLinks: NavLink[] = [
     href: "/products",
     label: "Products",
   },
+];
+
+export const loggedInLinks: NavLink[] = [
+  ...loggedOutLinks,
   {
     href: "/favorites",
     label: "Favorites",
