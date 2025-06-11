@@ -35,6 +35,7 @@ function HeroCarousel({ className }: Props) {
                       src={image}
                       alt="hero image"
                       className="h-96 w-full rounded-md object-cover"
+                      priority
                     />
                   </CardContent>
                 </Card>

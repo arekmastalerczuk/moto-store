@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Providers from "./providers";
 import Navbar from "@/components/navbar/Navbar";
@@ -18,17 +19,20 @@ export const metadata: Metadata = {
 const lato = Lato({
   subsets: ["latin-ext"],
   weight: ["100", "400", "700"],
+  preload: false,
 });
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={lato.className}>
-        <Providers>
-          <Navbar />
-          <Container className="pt-16">{children}</Container>
-        </Providers>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={lato.className}>
+          <Providers>
+            <Navbar />
+            <Container className="pt-16">{children}</Container>
+          </Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

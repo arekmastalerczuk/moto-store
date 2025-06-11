@@ -9,6 +9,15 @@
     "clerkId": "clerkId"
   },
   {
+    "name": "Himalayan 450",
+    "company": "Royal Enfield",
+    "description": "The Royal Enfield Himalayan 450 is a versatile adventure motorcycle that combines off-road capability with on-road comfort. The 450cc liquid-cooled engine delivers smooth power delivery across all RPM ranges, making it perfect for both city commuting and weekend adventures. The lightweight tripper navigation system and tubeless tyres provide peace of mind, while the comfortable upright riding position ensures fatigue-free long-distance touring. The Himalayan 450 also features a long-travel suspension and a high ground clearance, making it capable of handling rough terrains with ease.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/20262444/pexels-photo-20262444/free-photo-of-sciana-mur-czarny-motocykl.jpeg",
+    "price": 8500,
+    "clerkId": "clerkId"
+  },
+  {
     "name": "CMX1100",
     "company": "Honda",
     "description": "The Honda CMX1100 redefines the modern cruiser experience with its powerful 1100cc parallel-twin engine, delivering impressive torque at low RPMs for that authentic cruiser feel. The bike's low-slung design, combined with a comfortable 700mm seat height, makes it accessible to riders of all sizes while maintaining that classic bobber aesthetic. Advanced features include multiple riding modes, traction control, and cruise control, ensuring both safety and comfort on long rides. The CMX1100 boasts premium fit and finish, with attention to detail evident in its high-quality paintwork, LED lighting, and a sleek, minimalist design that turns heads wherever it goes. Whether you're cruising the boulevard or hitting the open highway, this bike offers a perfect blend of style, comfort, and performance.",
