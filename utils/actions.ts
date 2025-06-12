@@ -18,7 +18,7 @@ export const fetchAllProducts = async ({ search = "" }: { search: string }) => {
       ],
     },
     orderBy: {
-      createAt: "desc",
+      company: "asc",
     },
   });
 };

@@ -33,7 +33,7 @@ function LinksDropdown() {
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-          <DropdownMenuItem>
+          <DropdownMenuItem className="transition-colors duration-300 focus:bg-primary/30 dark:bg-primary/70 dark:focus:bg-primary/50">
             <SignInButton mode="modal">
               <button className="w-full text-left font-bold tracking-wider">
                 Login
@@ -55,7 +55,7 @@ function LinksDropdown() {
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="transition-opacity duration-300 focus:opacity-70 dark:bg-primary dark:text-primary-foreground">
+          <DropdownMenuItem className="transition-colors duration-300 focus:bg-primary/30 dark:bg-primary/70 dark:focus:bg-primary/50">
             <SignOutLink />
           </DropdownMenuItem>
         </SignedIn>

@@ -11,7 +11,7 @@ function Hero() {
           Happiness&nbsp;is&nbsp;not in money, but in shopping.
         </h1>
         <p className="mt-8 max-w-xl text-base leading-8 text-muted-foreground sm:text-lg lg:text-xl">
-          Enjoy your shopping experience!
+          Enjoy your shopping experience, have fun and ride safe!
         </p>
         <Button asChild size="lg" className="mt-8">
           <Link href="/products" className="tracking-wider">
