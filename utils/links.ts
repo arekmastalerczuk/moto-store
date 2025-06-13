@@ -6,15 +6,15 @@ type NavLink = {
 export const loggedOutLinks: NavLink[] = [
   {
     href: "/",
-    label: "Home",
+    label: "home",
   },
   {
     href: "/about",
-    label: "About",
+    label: "about",
   },
   {
     href: "/products",
-    label: "Products",
+    label: "products",
   },
 ];
 
@@ -22,14 +22,33 @@ export const loggedInLinks: NavLink[] = [
   ...loggedOutLinks,
   {
     href: "/favorites",
-    label: "Favorites",
+    label: "favorites",
   },
   {
     href: "/cart",
-    label: "Cart",
+    label: "cart",
   },
   {
     href: "/orders",
-    label: "Orders",
+    label: "orders",
+  },
+  {
+    href: "/admin/sales",
+    label: "dashboard",
+  },
+];
+
+export const adminLinks: NavLink[] = [
+  {
+    href: "/admin/sales",
+    label: "sales",
+  },
+  {
+    href: "/admin/products",
+    label: "my products",
+  },
+  {
+    href: "/admin/products/create",
+    label: "create product",
   },
 ];

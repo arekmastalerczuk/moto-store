@@ -13,6 +13,7 @@ import { Button } from "../ui/button";
 import { loggedInLinks, loggedOutLinks } from "@/utils/links";
 import UserIcon from "./UserIcon";
 import SignOutLink from "./SignOutLink";
+import { auth } from "@clerk/nextjs/server";
 
 function LinksDropdown() {
   return (
@@ -27,7 +28,7 @@ function LinksDropdown() {
         <SignedOut>
           {loggedOutLinks.map((link) => (
             <DropdownMenuItem key={link.href}>
-              <Link href={link.href} className="w-full">
+              <Link href={link.href} className="w-full capitalize">
                 {link.label}
               </Link>
             </DropdownMenuItem>
@@ -47,13 +48,20 @@ function LinksDropdown() {
           </DropdownMenuItem>
         </SignedOut>
         <SignedIn>
-          {loggedInLinks.map((link) => (
-            <DropdownMenuItem key={link.href}>
-              <Link href={link.href} className="w-full">
-                {link.label}
-              </Link>
-            </DropdownMenuItem>
-          ))}
+          {loggedInLinks.map(async (link) => {
+            const user = await auth();
+            const isAdmin = user?.userId === process.env.ADMIN_USER_ID;
+
+            if (link.label === "dashboard" && !isAdmin) return;
+
+            return (
+              <DropdownMenuItem key={link.href}>
+                <Link href={link.href} className="w-full capitalize">
+                  {link.label}
+                </Link>
+              </DropdownMenuItem>
+            );
+          })}
           <DropdownMenuSeparator />
           <DropdownMenuItem className="transition-colors duration-300 focus:bg-primary/30 dark:bg-primary/70 dark:focus:bg-primary/50">
             <SignOutLink />
