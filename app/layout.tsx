@@ -5,6 +5,7 @@ import "./globals.css";
 import Providers from "./providers";
 import Navbar from "@/components/navbar/Navbar";
 import Container from "@/components/global/Container";
+import Footer from "@/components/footer/Footer";
 
 type Props = {
   readonly children: React.ReactNode;
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Props) {
           <Providers>
             <Navbar />
             <Container className="pt-16">{children}</Container>
+            <Footer />
           </Providers>
         </body>
       </html>
