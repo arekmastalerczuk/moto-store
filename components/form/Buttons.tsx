@@ -10,7 +10,7 @@ type BtnSize = "default" | "sm" | "lg";
 
 type Props = {
   className?: string;
-  text?: string;
+  text: string;
   size?: BtnSize;
 };
 

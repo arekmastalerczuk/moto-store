@@ -1,16 +1,18 @@
 import React from "react";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
+import { cn } from "@/lib/utils";
 
 type Props = {
   name: string;
   label?: string;
   defaultValue?: string;
+  className?: string;
 };
 
-function TextAreaInput({ name, label, defaultValue = "" }: Props) {
+function TextAreaInput({ name, label, defaultValue = "", className }: Props) {
   return (
-    <div className="mb-2">
+    <div className={cn("mb-2", className)}>
       <Label
         htmlFor={name}
         className="text-sm font-bold capitalize tracking-wide"

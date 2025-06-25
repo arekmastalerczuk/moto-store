@@ -3,12 +3,12 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 
 type Props = {
-  defaultValue?: number;
+  defaultValue: number;
 };
 
 const name = "price";
 
-function PriceInput({ defaultValue = 0 }: Props) {
+function PriceInput({ defaultValue }: Props) {
   return (
     <div className="mb-2">
       <Label
