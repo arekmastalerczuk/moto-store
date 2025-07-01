@@ -6,13 +6,8 @@ import ImageInput from "@/components/form/ImageInput";
 import TextAreaInput from "@/components/form/TextAreaInput";
 import CheckboxInput from "@/components/form/CheckboxInput";
 import { SubmitButton } from "@/components/form/Buttons";
-
-const createProductAction = async (formData: FormData) => {
-  "use server";
-
-  const product = Object.fromEntries(formData);
-  console.log(product);
-};
+import { createProductAction } from "@/utils/actions";
+import FormContainer from "@/components/form/FormContainer";
 
 function CreateProductPage() {
   const name = faker.commerce.productName();
@@ -26,15 +21,28 @@ function CreateProductPage() {
         create product
       </h2>
       <div className="rounded-md border p-8">
-        <form action={createProductAction}>
-          <FormInput name="name" label="product name" defaultValue={name} />
-          <FormInput name="company" defaultValue={company} />
-          <TextAreaInput name="description" defaultValue={description} />
-          <PriceInput defaultValue={Number(price)} />
-          <ImageInput />
-          <CheckboxInput name="featured" label="featured" className="mb-6" />
-          <SubmitButton />
-        </form>
+        <FormContainer action={createProductAction}>
+          <div className="my-4 grid gap-4 md:grid-cols-2">
+            <FormInput name="name" label="product name" defaultValue={name} />
+            <FormInput name="company" defaultValue={company} />
+            <TextAreaInput
+              name="description"
+              label="product description"
+              defaultValue={description}
+              className="col-span-2"
+            />
+            <PriceInput defaultValue={Number(price)} />
+            <ImageInput />
+            <CheckboxInput
+              name="featured"
+              defaultChecked={false}
+              className="col-span-2"
+            />
+          </div>
+          <div className="flex justify-center">
+            <SubmitButton text="create" className="mt-4" />
+          </div>
+        </FormContainer>
       </div>
     </section>
   );
