@@ -2,9 +2,12 @@
 
 import React from "react";
 import { useFormStatus } from "react-dom";
-import { Button } from "../ui/button";
-import { RiLoader5Fill } from "react-icons/ri";
 import { cn } from "@/lib/utils";
+import { RiLoader5Fill } from "react-icons/ri";
+import { ReloadIcon } from "@radix-ui/react-icons";
+import { GrEdit } from "react-icons/gr";
+import { FaTrash } from "react-icons/fa";
+import { Button } from "../ui/button";
 
 type BtnSize = "default" | "sm" | "lg";
 
@@ -35,6 +38,36 @@ export function SubmitButton({
       ) : (
         text
       )}
+    </Button>
+  );
+}
+
+type ActionType = "edit" | "delete";
+
+export function IconButton({ action }: { action: ActionType }) {
+  const { pending } = useFormStatus();
+
+  const renderIcon = () => {
+    switch (action) {
+      case "edit":
+        return <GrEdit />;
+      case "delete":
+        return <FaTrash />;
+      default:
+        const never: never = action;
+        throw new Error(`Invalid action type: ${never}`);
+    }
+  };
+
+  return (
+    <Button
+      type="submit"
+      size="icon"
+      variant="link"
+      className="cursor-pointer p-2"
+      disabled={pending}
+    >
+      {pending ? <ReloadIcon className="animate-spin" /> : renderIcon()}
     </Button>
   );
 }
