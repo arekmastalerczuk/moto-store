@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 import Sidebar from "./Sidebar";
+import SectionTitle from "@/components/global/SectionTitle";
 
 type Props = {
   children: React.ReactNode;
@@ -9,8 +10,7 @@ type Props = {
 function DashboardLayout({ children }: Props) {
   return (
     <>
-      <h2 className="pl-4 text-2xl font-bold">Dashboard</h2>
-      <Separator className="mt-2" />
+      <SectionTitle title="dashboard" />
       <section className="mt-12 grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-2">
           <Sidebar />

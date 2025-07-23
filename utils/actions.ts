@@ -116,6 +116,20 @@ export const fetchAdminProducts = async () => {
   return products;
 };
 
+export const fetchAdminProductDetails = async (productId: string) => {
+  await getAdminUser();
+
+  const product = await prisma.product.findUnique({
+    where: {
+      id: productId,
+    },
+  });
+
+  if (!product) redirect("/admin/products");
+
+  return product;
+};
+
 export const deleteProductAction = async (prevState: { productId: string }) => {
   const { productId } = prevState;
 
@@ -134,6 +148,72 @@ export const deleteProductAction = async (prevState: { productId: string }) => {
 
     return {
       message: "Product removed successfully",
+    };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+export const updateProductAction = async (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prevState: any,
+  formData: FormData,
+) => {
+  await getAdminUser();
+
+  try {
+    const productId = formData.get("id") as string;
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = validateWithZodSchema(productSchema, rawData);
+
+    await prisma.product.update({
+      where: {
+        id: productId,
+      },
+      data: {
+        ...validatedFields,
+      },
+    });
+
+    revalidatePath(`/admin/products/${productId}/edit`);
+
+    return {
+      message: "Product updated successfully",
+    };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+export const updateProductImageAction = async (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prevState: any,
+  formData: FormData,
+) => {
+  await getAdminUser();
+
+  try {
+    const image = formData.get("image") as File;
+    const productId = formData.get("id") as string;
+    const oldImageUrl = formData.get("url") as string;
+
+    const validatedFile = validateWithZodSchema(imageSchema, { image });
+    const fullPath = await uploadImage(validatedFile.image);
+
+    await deleteImage(oldImageUrl);
+    await prisma.product.update({
+      where: {
+        id: productId,
+      },
+      data: {
+        image: fullPath,
+      },
+    });
+
+    revalidatePath(`/admin/products/${productId}/edit`);
+
+    return {
+      message: "Product image updated successfully",
     };
   } catch (error) {
     return renderError(error);

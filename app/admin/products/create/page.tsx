@@ -17,9 +17,9 @@ function CreateProductPage() {
 
   return (
     <section>
-      <h2 className="mb-4 text-2xl font-medium capitalize tracking-wider">
+      <h3 className="mb-4 text-2xl font-medium capitalize tracking-wider">
         create product
-      </h2>
+      </h3>
       <div className="rounded-md border p-8">
         <FormContainer action={createProductAction}>
           <div className="my-4 grid gap-4 md:grid-cols-2">
