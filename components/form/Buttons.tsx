@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 import { RiLoader5Fill } from "react-icons/ri";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { GrEdit } from "react-icons/gr";
-import { FaTrash } from "react-icons/fa";
+import { FaHeart, FaRegHeart, FaTrash } from "react-icons/fa";
+import { SignInButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 
 type BtnSize = "default" | "sm" | "lg";
@@ -71,3 +72,40 @@ export function IconButton({ action }: { action: ActionType }) {
     </Button>
   );
 }
+
+export const CardSignInButton = () => {
+  return (
+    <SignInButton mode="modal">
+      <Button
+        type="button"
+        size="icon"
+        variant="outline"
+        className="cursor-pointer p-2"
+        asChild
+      >
+        <FaRegHeart />
+      </Button>
+    </SignInButton>
+  );
+};
+
+export const CardSubmitButton = ({ isFavorite }: { isFavorite: boolean }) => {
+  const { pending } = useFormStatus();
+  return (
+    <Button
+      type="submit"
+      size="icon"
+      variant="outline"
+      className="cursor-pointer p-2"
+      disabled={pending}
+    >
+      {pending ? (
+        <ReloadIcon className="animate-spin" />
+      ) : isFavorite ? (
+        <FaHeart />
+      ) : (
+        <FaRegHeart />
+      )}
+    </Button>
+  );
+};
