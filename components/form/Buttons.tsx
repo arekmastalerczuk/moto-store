@@ -83,7 +83,9 @@ export const CardSignInButton = () => {
         className="cursor-pointer p-2"
         asChild
       >
-        <FaRegHeart />
+        <span>
+          <FaRegHeart />
+        </span>
       </Button>
     </SignInButton>
   );
