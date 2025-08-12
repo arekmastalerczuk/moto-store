@@ -6,6 +6,7 @@ import { formatPrice } from "@/utils/format";
 import FavoriteToggleButton from "@/components/products/FavoriteToggleButton";
 import ProductRating from "@/components/single-product/ProductRating";
 import AddToCart from "@/components/single-product/AddToCart";
+import ShareButton from "@/components/single-product/ShareButton";
 
 type Props = {
   params: {
@@ -38,7 +39,14 @@ async function ProductDetailsPage({ params }: Props) {
         <div>
           <div className="flex items-center gap-x-8">
             <h2 className="text-3xl font-bold capitalize">{name}</h2>
-            <FavoriteToggleButton productId={params.id} />
+            <div className="flex items-center gap-x-2">
+              <FavoriteToggleButton productId={params.id} />
+              <ShareButton
+                productId={params.id}
+                company={company}
+                name={name}
+              />
+            </div>
           </div>
           <ProductRating productId={params.id} />
           <h3 className="mt-2 text-xl">{company}</h3>

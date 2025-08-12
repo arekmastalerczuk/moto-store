@@ -10,7 +10,10 @@ function Loading() {
         <div>
           <div className="flex items-center gap-x-8">
             <Skeleton className="h-9 w-1/6" />
-            <Skeleton className="size-9" />
+            <div className="flex items-center gap-x-2">
+              <Skeleton className="size-9" />
+              <Skeleton className="size-9" />
+            </div>
           </div>
           <Skeleton className="mt-4 h-4 w-1/6" />
           <Skeleton className="mt-6 h-4 w-1/6" />
