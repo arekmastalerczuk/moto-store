@@ -1,11 +1,16 @@
 "use server";
 
-import prisma from "@/utils/db";
 import { redirect } from "next/navigation";
-import { currentUser } from "@clerk/nextjs/server";
-import { imageSchema, productSchema, validateWithZodSchema } from "./schemas";
-import { deleteImage, uploadImage } from "./supabase";
 import { revalidatePath } from "next/cache";
+import { currentUser } from "@clerk/nextjs/server";
+import { deleteImage, uploadImage } from "./supabase";
+import prisma from "@/utils/db";
+import {
+  imageSchema,
+  productSchema,
+  reviewSchema,
+  validateWithZodSchema,
+} from "./schemas";
 
 // helper function
 const getAuthUser = async () => {
@@ -285,3 +290,39 @@ export const fetchUserFavorites = async () => {
 
   return favorites;
 };
+
+export const createReviewAction = async (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prevState: any,
+  formData: FormData,
+) => {
+  const user = await getAuthUser();
+  try {
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = validateWithZodSchema(reviewSchema, rawData);
+    await prisma.review.create({
+      data: { ...validatedFields, clerkId: user.id },
+    });
+
+    revalidatePath(`/products/${validatedFields.productId}`);
+
+    return {
+      message: "Review submitted successfully",
+    };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+export const fetchProductReviews = async (productId: string) => {};
+
+export const fetchProductReviewsByUser = async (userId: string) => {};
+
+export const deleteReviewAction = async (
+  userId: string,
+  reviewId: string,
+) => {};
+
+export const findExistingReview = async (reviewId: string) => {};
+
+export const fetchProductRating = async (productId: string) => {};

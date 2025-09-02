@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import BreadCrumbs from "@/components/single-product/BreadCrumbs";
-import { fetchSingleProduct } from "@/utils/actions";
-import { formatPrice } from "@/utils/format";
 import FavoriteToggleButton from "@/components/products/FavoriteToggleButton";
 import ProductRating from "@/components/single-product/ProductRating";
 import AddToCart from "@/components/single-product/AddToCart";
 import ShareButton from "@/components/single-product/ShareButton";
+import ProductReviews from "@/components/reviews/ProductReviews";
+import SubmitReview from "@/components/reviews/SubmitReview";
+import { fetchSingleProduct } from "@/utils/actions";
+import { formatPrice } from "@/utils/format";
 
 type Props = {
   params: {
@@ -57,6 +59,8 @@ async function ProductDetailsPage({ params }: Props) {
           <AddToCart productId={params.id} />
         </div>
       </div>
+      <ProductReviews productId={params.id} />
+      <SubmitReview productId={params.id} />
     </section>
   );
 }
