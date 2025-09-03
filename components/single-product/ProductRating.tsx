@@ -1,14 +1,13 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { fetchProductRating } from "@/utils/actions";
 
 type Props = {
   productId: string;
 };
 
-function ProductRating({ productId }: Props) {
-  // temp values
-  const rating = 4.6;
-  const count = 16;
+async function ProductRating({ productId }: Props) {
+  const { rating, count } = await fetchProductRating(productId);
 
   const className = "flex gap-x-1 items-center mt-2 mb-4";
   const countValue = `(${count}) reviews`;
