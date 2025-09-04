@@ -36,6 +36,10 @@ export const loggedInLinks: NavLink[] = [
     href: "/admin/sales",
     label: "dashboard",
   },
+  {
+    href: "/reviews",
+    label: "reviews",
+  },
 ];
 
 export const adminLinks: NavLink[] = [

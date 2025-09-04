@@ -36,7 +36,7 @@ function ReviewCard({ reviewInfo, children }: Props) {
       <CardContent>
         <Comment comment={comment} />
       </CardContent>
-      <div className="absolute right-3 top-3">{children}</div>
+      <div className="absolute right-4 top-4">{children}</div>
     </Card>
   );
 }
