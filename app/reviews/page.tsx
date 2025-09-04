@@ -21,9 +21,10 @@ async function ReviewsPage() {
       <SectionTitle title="your reviews" />
       <section className="mt-8 grid gap-8 lg:grid-cols-2">
         {reviews.map((review) => {
-          const { id, rating, comment, product } = review;
+          const { id, rating, comment, product, productId } = review;
           const { name, image } = product;
           const reviewInfo = {
+            productId,
             comment,
             rating,
             name,

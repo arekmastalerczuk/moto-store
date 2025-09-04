@@ -356,6 +356,7 @@ export const fetchProductReviewsByUser = async () => {
     },
     select: {
       id: true,
+      productId: true,
       rating: true,
       comment: true,
       product: {
