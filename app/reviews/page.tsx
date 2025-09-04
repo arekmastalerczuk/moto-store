@@ -6,8 +6,6 @@ import FormContainer from "@/components/form/FormContainer";
 import { IconButton } from "@/components/form/Buttons";
 
 async function ReviewsPage() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
   const reviews = await fetchProductReviewsByUser();
 
   if (reviews.length === 0) {
