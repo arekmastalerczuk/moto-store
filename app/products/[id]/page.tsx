@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { auth } from "@clerk/nextjs/server";
 import BreadCrumbs from "@/components/single-product/BreadCrumbs";
 import FavoriteToggleButton from "@/components/products/FavoriteToggleButton";
 import ProductRating from "@/components/single-product/ProductRating";
@@ -7,7 +8,7 @@ import AddToCart from "@/components/single-product/AddToCart";
 import ShareButton from "@/components/single-product/ShareButton";
 import ProductReviews from "@/components/reviews/ProductReviews";
 import SubmitReview from "@/components/reviews/SubmitReview";
-import { fetchSingleProduct } from "@/utils/actions";
+import { fetchSingleProduct, findExistingReview } from "@/utils/actions";
 import { formatPrice } from "@/utils/format";
 
 type Props = {
@@ -21,6 +22,9 @@ async function ProductDetailsPage({ params }: Props) {
 
   const { name, company, description, price, image } = product;
   const dollarsAmount = formatPrice(price);
+  const { userId } = await auth();
+  const reviewDoesNotExist =
+    userId && !(await findExistingReview(userId, product.id));
 
   return (
     <section>
@@ -60,7 +64,7 @@ async function ProductDetailsPage({ params }: Props) {
         </div>
       </div>
       <ProductReviews productId={params.id} />
-      <SubmitReview productId={params.id} />
+      {reviewDoesNotExist && <SubmitReview productId={params.id} />}
     </section>
   );
 }
