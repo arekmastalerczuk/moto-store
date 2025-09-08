@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { currentUser } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { deleteImage, uploadImage } from "./supabase";
 import prisma from "@/utils/db";
 import {
@@ -400,4 +400,18 @@ export const findExistingReview = async (userId: string, productId: string) => {
       productId,
     },
   });
+};
+
+export const fetchNumberOfCartItems = async () => {
+  const { userId } = await auth();
+  const cart = await prisma.cart.findFirst({
+    where: {
+      clerkId: userId ?? "",
+    },
+    select: {
+      numItemsInCart: true,
+    },
+  });
+
+  return cart?.numItemsInCart || 0;
 };

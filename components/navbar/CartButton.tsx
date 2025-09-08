@@ -2,10 +2,10 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
+import { fetchNumberOfCartItems } from "@/utils/actions";
 
 async function CartButton() {
-  // TODO: dynamic numItemsInCart
-  const numItemsInCart = 2;
+  const numItemsInCart = await fetchNumberOfCartItems();
 
   return (
     <Button
