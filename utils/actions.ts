@@ -560,3 +560,23 @@ export const addToCartAction = async (
   }
   redirect("/cart");
 };
+
+export const removeCartItemAction = async (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prevState: any,
+  formData: FormData,
+) => {
+  return {
+    message: "Item removed from cart",
+  };
+};
+
+export const createOrderAction = async (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prevState: any,
+  formData: FormData,
+) => {
+  return {
+    message: "order created",
+  };
+};
