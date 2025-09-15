@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { CartItemWithProduct } from "@/utils/types";
 import { Card } from "@/components/ui/card";

@@ -505,6 +505,9 @@ export const updateCart = async (cart: Cart) => {
     include: {
       product: true,
     },
+    orderBy: {
+      createdAt: "asc",
+    },
   });
 
   let numItemsInCart = 0;
@@ -533,7 +536,7 @@ export const updateCart = async (cart: Cart) => {
     include: includeProductClause,
   });
 
-  return currentCart;
+  return { cartItems, currentCart };
 };
 
 export const addToCartAction = async (
@@ -587,6 +590,43 @@ export const removeCartItemAction = async (
 
     return {
       message: "Item removed from cart",
+    };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+export const updateCartItemAction = async ({
+  amount,
+  cartItemId,
+}: {
+  amount: number;
+  cartItemId: string;
+}) => {
+  const user = await getAuthUser();
+
+  try {
+    const cart = await fetchOrCreateCart({
+      userId: user.id,
+      errorOnFailure: true,
+    });
+
+    await prisma.cartItem.update({
+      where: {
+        id: cartItemId,
+        cartId: cart.id,
+      },
+      data: {
+        amount,
+      },
+    });
+
+    await updateCart(cart);
+
+    revalidatePath("/cart");
+
+    return {
+      message: "cart updated",
     };
   } catch (error) {
     return renderError(error);
