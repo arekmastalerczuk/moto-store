@@ -639,11 +639,21 @@ export const createOrderAction = async (
   formData: FormData,
 ) => {
   const user = await getAuthUser();
+  let cartId: string | null = null;
+  let orderId: string | null = null;
 
   try {
     const cart = await fetchOrCreateCart({
       userId: user.id,
       errorOnFailure: true,
+    });
+    cartId = cart.id;
+
+    await prisma.order.deleteMany({
+      where: {
+        clerkId: user.id,
+        isPaid: false,
+      },
     });
 
     const order = await prisma.order.create({
@@ -656,17 +666,12 @@ export const createOrderAction = async (
         email: user.emailAddresses[0].emailAddress,
       },
     });
-
-    await prisma.cart.delete({
-      where: {
-        id: cart.id,
-      },
-    });
+    orderId = order.id;
   } catch (error) {
     return renderError(error);
   }
 
-  redirect("/orders");
+  redirect(`/checkout?orderId=${orderId}&cartId=${cartId}`);
 };
 
 export const fetchUserOrders = async () => {
