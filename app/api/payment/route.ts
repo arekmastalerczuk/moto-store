@@ -2,9 +2,9 @@ import Stripe from "stripe";
 import { type NextRequest } from "next/server";
 import prisma from "@/utils/db";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
-
 export const POST = async (req: NextRequest) => {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+
   const requestHeaders = new Headers(req.headers);
   const origin = requestHeaders.get("origin");
   const { orderId, cartId } = await req.json();

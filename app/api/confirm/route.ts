@@ -3,9 +3,9 @@ import { type NextRequest } from "next/server";
 import prisma from "@/utils/db";
 import { redirect } from "next/navigation";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
-
 export const GET = async (req: NextRequest) => {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+
   const { searchParams } = new URL(req.url);
   const session_id = searchParams.get("session_id") as string;
 
