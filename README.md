@@ -5,6 +5,77 @@ MotoStore is a cutting-edge e-commerce platform designed specifically for motorc
 [![Live Demo](https://img.shields.io/badge/🚀-Live_Demo-4CAF50?style=for-the-badge&logo=vercel&logoColor=white)](https://moto-store-sepia.vercel.app/)
 [![GitHub](https://img.shields.io/badge/🔗-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arekmastalerczuk/moto-store)
 
+## 📸 Screenshots
+
+### 🏠 Main Interface
+
+<div align="center">
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+    <div style="flex: 1; min-width: 300px; max-width: 48%;">
+      <p style="text-align: center; margin: 0 0 8px 0;"><em>☀️ Light Mode</em></p>
+      <img 
+        src="./public/screenshots/motostore-white.png" 
+        alt="MotoStore - Light Mode" 
+        style="width: 100%; border-radius: 8px; border: 1px solid #e1e4e8; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
+      />
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 48%;">
+      <p style="text-align: center; margin: 0 0 8px 0;"><em>🌙 Dark Mode</em></p>
+      <img 
+        src="./public/screenshots/motostore-black.png" 
+        alt="MotoStore - Dark Mode" 
+        style="width: 100%; border-radius: 8px; border: 1px solid #2d3748; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);"
+      />
+    </div>
+  </div>
+</div>
+
+### 🛒 Shopping Experience
+
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+    <div style="flex: 1; min-width: 300px; max-width: 48%;">
+      <p style="text-align: center; margin: 0 0 8px 0;"><em>🛍️ Product Details</em></p>
+      <img 
+        src="./public/screenshots/single-product.png" 
+        alt="Product Details" 
+        style="width: 100%; border-radius: 8px; border: 1px solid #e1e4e8;"
+      />
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 48%;">
+      <p style="text-align: center; margin: 0 0 8px 0;"><em>🛒 Shopping Cart</em></p>
+      <img 
+        src="./public/screenshots/shopping-cart.png" 
+        alt="Shopping Cart" 
+        style="width: 100%; border-radius: 8px; border: 1px solid #e1e4e8;"
+      />
+    </div>
+  </div>
+</div>
+
+### 💳 Checkout & Admin
+
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+    <div style="flex: 1; min-width: 300px; max-width: 48%;">
+      <p style="text-align: center; margin: 0 0 8px 0;"><em>💳 Secure Checkout</em></p>
+      <img 
+        src="./public/screenshots/checkout.png" 
+        alt="Checkout Process" 
+        style="width: 100%; border-radius: 8px; border: 1px solid #e1e4e8;"
+      />
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 48%;">
+      <p style="text-align: center; margin: 0 0 8px 0;"><em>📊 Admin Dashboard</em></p>
+      <img 
+        src="./public/screenshots/dashboard.png" 
+        alt="Admin Dashboard" 
+        style="width: 100%; border-radius: 8px; border: 1px solid #e1e4e8;"
+      />
+    </div>
+  </div>
+</div>
+
 ## ✨ Features
 
 - 🛒 Intuitive product browsing
